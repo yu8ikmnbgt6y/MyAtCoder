@@ -2,8 +2,7 @@ import math
 N, M = map(int, input().split())
 
 
-# Exapmle:
-# enum_divisors(10) returns [1,2,5,10]
+# Exapmle:enum_divisors(10) returns [1,2,5,10]
 def enum_divisors(n, reverse=False):
     divisors = []
     # Each divisor has its own pair.
