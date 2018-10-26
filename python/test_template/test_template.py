@@ -1,8 +1,19 @@
 import sys
+import io
 
+input_txt = """
+3 70
+7 60
+1 80
+4 50
+"""
 
+sys.stdin = io.StringIO(input_txt)
+print(input())
+
+# copy the below part and paste to the submission form.
+# ---------function------------
 def main():
-    # ---------function------------
     N, T = map(int, input().split())
 
     cost = 100001
@@ -15,15 +26,10 @@ def main():
         print(cost)
     else:
         print('TLE')
-    # -----------------------------
-    return 0
+
+    return
 
 
-fname = 'test/input_sample_1.txt'
-with open(fname, 'r') as fin:
-    sys.stdin = fin
-    # メイン関数
-    main()
-
-
+main()
+# -----------------------------
 sys.stdin = sys.__stdin__
